@@ -1,0 +1,27 @@
+﻿@model StocksApp.Models.CompanyDetails
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head><title>Company Details</title>
+    <link style="~/StyleSheet.css"  rel="stylesheet"/>
+</head>
+<body>
+    <table class="table">
+         <tr>
+            <th>Headlines</th>
+            <td>@Model.Name</td>
+        </tr>
+        <tr>
+            <th>Summary</th>
+            <td>@Model.Country</td>
+        </tr>
+        <tr>
+            <th>Source</th>
+            <td>@Model.Currency</td>
+        </tr>
+        <tr>
+            <th>Source</th>
+            <td>@Model.Phone</td>
+        </tr>
+    </table>
+</body>
+</html>

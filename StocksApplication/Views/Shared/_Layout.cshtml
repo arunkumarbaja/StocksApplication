@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="container">
+        <div class="page-content">
+            <div class="margin-bottom" id="top-bar-div">
+
+                <div class="flex" id="app-title-div">
+                    <div class="flex-1">
+                        <h1 class="app-title">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            Stocks
+                        </h1>
+                    </div>
+                    <div class="flex-1">
+                        Login
+                    </div>
+                    <div class="flex-1">
+                        <i class="fa-solid fa-house" >@Html.ActionLink("Home", "Index", "Home")</i>
+                    </div>
+                    <div class="flex-1">
+                        <i class="fa-solid fa-briefcase">@Html.ActionLink("Your Orders", "Orders", "Home")</i>
+                    </div>
+                </div>
+            </div>
+
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿@model StocksApp.Models.Stock
+@{
+	ViewBag.Title = "Home";
+
+}
+@Html.BeginForm("")
+{
+	<div class="box trading-panel-flex">
+	<div id="stock-price-panel">
+		<div class="stock">
+			<h1 class="stock-title blue-back" >@Model.stockSymbol</h1>
+		</div>
+		<table class="stock-table">
+			<tr>
+				<td>   StockName:<small>$</small><span>
+				<th> @Model.StockName?.ToString()</span> </th></td>
+			</tr>
+			<tr>
+				<td>   StockSumbol:<small>$</small><span>
+				<th> @Model.stockSymbol?.ToString()</span> </th></td>
+			</tr>
+            <tr>
+				<td>   Current:<small>$</small><span>
+				<th> @Model.CurrentPrice.ToString("N")</span> </th></td>
+			</tr>
+			<tr>
+				
+				<td>   Low:<small>$</small><span>
+				<th> @Model.LowestPrice.ToString("N")</span> </th></td>
+			</tr>
+			<tr>
+				
+				<td>   Highest:<small>$</small><span>
+				<th> @Model.HighestPrice.ToString("N")</span> </th></td>
+			</tr>
+			<tr>
+				<td>   Open:<small>$</small><span>
+				<th> @Model.OpenPrice.ToString("N")</span> </th></td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<label id="BuyStock" class="form-input"> Buy</label>
+		<input type="text" class="form-input" id=BuyStock" name="Quantity"/>
+	</div>
+</div>
+
+
+<div class="page-content"><h2>Company Info</h2>"
+	@ViewBag.cpyname
+</div>
+}
+
+
+
+

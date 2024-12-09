@@ -1,0 +1,35 @@
+﻿@model IEnumerable<BuyOrderResponse>
+
+
+<div>@Html.ActionLink("SellOrders", "SellOrders", "Home")</div>
+<form action="~/Persons/Orders" method="get" >
+	<div class="box">
+
+		<table class="table" w-100>
+			<thead>
+			<th>Buy Order Id</th>
+			<th>Stock Name</th>
+			<th>Stock Symbol</th>
+			<th>Date Time</th>
+			<th>Quantity</th>
+			<th>Price</th>
+			</thead>
+
+			@foreach (BuyOrderResponse order in Model)
+			{
+				<tbody>
+					<tr>
+						<td>@order.BuyOrderID.ToString("N").Substring(0, 6)</td>
+						<td>@order.StockOrderName</td>
+						<td>@order.StockOrderSymbol</td>
+						<td>@order.DateAndTimeofBuyOrder</td>
+						<td>@order.Quantity</td>
+						<td>@order.Price</td>
+					</tr>
+				</tbody>
+			}
+		</table>
+
+	</div>
+
+</form>

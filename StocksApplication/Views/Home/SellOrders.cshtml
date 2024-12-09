@@ -1,0 +1,34 @@
+﻿@model IEnumerable<SellOrderResponse>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sell Orders</title>
+</head>
+<body>
+    <table class="table" w-100>
+        <thead>
+        <th>Sell Order Id</th>
+        <th>Stock Name</th>
+        <th>Stock Symbol</th>
+        <th>Date Time</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        </thead>
+        @foreach(SellOrderResponse order in Model)
+        {
+            <tbody>
+                <tr>
+                    <td>@order.SellOrderID.ToString("N").Substring(0, 6)</td>
+                    <td>@order.StockOrderName</td>
+                    <td>@order.StockOrderSymbol</td>
+                    <td>@order.DateAndTimeofBuyOrder</td>
+                    <td>@order.Quantity</td>
+                    <td>@order.Price</td>
+                </tr>
+            </tbody>
+        }
+    </table>
+</body>
+</html>
+
+@Html.ActionLink("Back to orders","Orders","Home")
